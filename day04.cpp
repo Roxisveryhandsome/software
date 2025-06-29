@@ -92,30 +92,7 @@ vector<int> div(vector<int>&A,int& b,int&r,vector<int>&C){
     
 }
 int main(){
-    string num1,num2;
-    vector<int> num_1,num_2,outcome;
-    cin>>num1>>num2;
-    for(int i=num1.length()-1;i>=0;i--){
-       num_1.push_back(num1[i]-'0');
-    }
-    for(int i=num2.length()-1;i>=0;i--){
-        num_2.push_back(num2[i]-'0');
-     }
-    add(num_1,num_2,outcome);
-    if(cmp(num_1,num_2)){
-        sub(num_1,num_2,outcome);
-        for(int i=outcome.size()-1;i>=0;i--){
-            cout<<outcome[i];
-           }
-     
-    }
-    else{
-        sub(num_2,num_1,outcome);
-        cout<<'-';
-        for(int i=outcome.size()-1;i>=0;i--){
-            cout<<outcome[i];
-           }
-    }
+    
   
    return 0;
 }

@@ -14,6 +14,6 @@ double get_3_sqrt(double x){
         left=mid;
     }
    }
-   return left;
+   return 0;
 }
 

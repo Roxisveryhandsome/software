@@ -2,26 +2,7 @@
 #include<iostream>
 using namespace std;
 
-void quick_sort(int *arr,int l,int r){
-    if(l>=r){
-        return;
-        //注意这里是大于等于
-    }
-    int i=l-1,j=r+1,x=arr[(l+r)/2];
-    //注意左右指针值得选取，以及比较量的选取
-    while(i<j){
-        do i++; while(arr[i]<x);
-        do j--; while(arr[j]>x);
-        if(i<j){
-            int temp=arr[i];
-            arr[i]=arr[j];
-            arr[j]=temp;
-        }
-    }
-    //先操作后递归
-    quick_sort(arr,l,j);
-    quick_sort(arr,j+1,r);
-}
+
 
 
 void merge_sort(int*arr,int l,int r,int*temp){
