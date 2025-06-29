@@ -16,22 +16,3 @@ void prefix_matrix_sum(int**matrix,int**sum_matrix,int n,int m){
         }
      }
 }
-int main(){
-    int n,m;
-    cin>>n>>m;
-    int*num=new int[n];
-    int*sum=new int[n+1];
-    for(int i=0;i<n;i++){
-       cin>>num[i];
-    }
-    int*l=new int[m];
-    int*r=new int[m];
-    for(int i=0;i<m;i++){
-        cin>>l[i]>>r[i];
-    }
-    prefix_sum(sum,num,n);
-    for(int i=0;i<m;i++){
-       cout<<sum[r[i]]-sum[l[i]-1]<<endl;
-    }
-    return 0;
-}
